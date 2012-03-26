@@ -19,7 +19,7 @@
 
 include_recipe "java"
 
-case node[:platform]
+case node['platform']
 when "redhat","centos","fedora"
   
   package "yum-priorities" do
@@ -30,7 +30,7 @@ when "redhat","centos","fedora"
     action :nothing
   end
   
-  template "/etc/yum.repos.d/jpackage#{node[:jpackage][:version].sub(/\./,'')}.repo" do
+  template "/etc/yum.repos.d/jpackage#{node['jpackage']['version'].sub(/\./,'')}.repo" do
     mode "0644"
     source "jpackage.repo.erb"
     notifies :run, resources(:execute => "yum clean all"), :immediately
