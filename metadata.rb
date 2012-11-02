@@ -7,7 +7,7 @@ version          "0.10.0"
 
 depends "java"
 
-%w{ centos redhat fedora }.each do |os|
+%w{ centos redhat fedora amazon scientific}.each do |os|
   supports os
 end
 
