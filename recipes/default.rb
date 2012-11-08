@@ -20,7 +20,7 @@
 include_recipe "java"
 
 case node[:platform_family]
-when "redhat","fedora"
+when "rhel","fedora"
 
   package "yum-priorities"
 
