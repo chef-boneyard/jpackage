@@ -19,23 +19,21 @@
 
 include_recipe "java"
 
-case node[:platform]
-when "redhat","centos","fedora"
-  
-  package "yum-priorities" do
-    action :install
-  end
-  
+case node[:platform_family]
+when "rhel","fedora"
+
+  package "yum-priorities"
+
   execute "yum clean all" do
     action :nothing
   end
-  
+
   template "/etc/yum.repos.d/jpackage#{node[:jpackage][:version].sub(/\./,'')}.repo" do
     mode "0644"
     source "jpackage.repo.erb"
     notifies :run, resources(:execute => "yum clean all"), :immediately
   end
-  
+
   # fix the jpackage-utils issue
   # https://bugzilla.redhat.com/show_bug.cgi?id=497213
   # http://plone.lucidsolutions.co.nz/linux/centos/jpackage-jpackage-utils-compatibility-for-centos-5.x
@@ -44,15 +42,13 @@ when "redhat","centos","fedora"
     source "http://plone.lucidsolutions.co.nz/linux/centos/images/jpackage-utils-compat-el5-0.0.1-1.noarch.rpm"
     mode "0644"
   end
-  
+
   package "jpackage-utils-compat-el5" do
     source "#{Chef::Config[:file_cache_path]}/jpackage-utils-compat-el5-0.0.1-1.noarch.rpm"
-    options "--nogpgcheck" 
+    options "--nogpgcheck"
     version "0.0.1"
     action :install
   end
-  
-  package "jpackage-utils" do
-    action :install
-  end
+
+  package "jpackage-utils"
 end
