@@ -1,7 +1,12 @@
-## v1.0.0:
+jpackage Cookbook CHANGELOG
+===========================
+This file is used to list changes made in each version of the jpackage cookbook.
 
-* [COK-2127] - Use `platform_family` to add OS support
 
-## v0.10.0:
+v1.0.0
+------
+- [COOK-2127] - Use `platform_family` to add OS support
 
-* Initial released version.
+v0.10.0
+-------
+- Initial released version.
