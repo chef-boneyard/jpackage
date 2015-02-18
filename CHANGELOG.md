@@ -6,7 +6,7 @@ This file is used to list changes made in each version of the jpackage cookbook.
 v1.0.2
 ------
 ### Bug
-- **[COOK-3416](https://tickets.opscode.com/browse/COOK-3416)** - Fix installation on EL6
+- **[COOK-3416](https://tickets.chef.io/browse/COOK-3416)** - Fix installation on EL6
 
 v1.0.0
 ------

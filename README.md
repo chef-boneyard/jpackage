@@ -18,7 +18,7 @@ Platform:
 
 * CentOS, Red Hat, Amazon, Oracle, Scientific, Fedora
 
-The following Opscode cookbooks are dependencies:
+The following Chef Software cookbooks are dependencies:
 
 * java
 
@@ -35,9 +35,9 @@ Simply include the recipe where you want JPackage installed.
 License and Author
 ==================
 
-Author:: Seth Chisamore (<schisamo@opscode.com>)
+Author:: Seth Chisamore (<schisamo@chef.io>)
 
-Copyright 2010, Opscode, Inc.
+Copyright 2010, Chef Software, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
