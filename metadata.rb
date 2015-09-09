@@ -12,3 +12,7 @@ depends          "java"
 end
 
 recipe "jpackage::default", "Installs and configures jpackage"
+
+source_url 'https://github.com/chef-cookbooks/jpackage' if respond_to?(:source_url)
+issues_url 'https://github.com/chef-cookbooks/jpackage/issues' if respond_to?(:issues_url)
+
