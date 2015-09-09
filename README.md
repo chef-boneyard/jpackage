@@ -1,5 +1,8 @@
-Description
-===========
+jpackage Cookbook
+=================
+
+[![Build Status](https://travis-ci.org/chef-cookbooks/jpackage.svg?branch=master)](http://travis-ci.org/chef-cookbooks/jpackage)
+[![Cookbook Version](https://img.shields.io/cookbook/v/jpackage.svg)](https://supermarket.chef.io/cookbooks/jpackage)
 
 Configures and installs JPackage.  Used to install Java-related packages on Red Hat flavored linuxes
 
@@ -11,14 +14,14 @@ The JPackage Project has two primary goals:
 Requirements
 ============
 
-Chef 0.10.10 and Ohai 0.6.12 are required due to the use of
-`platform_family`.
+Chef:
+* Chef 11+
 
 Platform:
 
 * CentOS, Red Hat, Amazon, Oracle, Scientific, Fedora
 
-The following Chef Software cookbooks are dependencies:
+Cookbooks:
 
 * java
 
@@ -37,7 +40,8 @@ License and Author
 
 Author:: Seth Chisamore (<schisamo@chef.io>)
 
-Copyright 2010, Chef Software, Inc.
+```text
+Copyright 2010-2015, Chef Software, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -50,3 +54,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+```
