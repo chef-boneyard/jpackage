@@ -14,15 +14,14 @@ The JPackage Project has two primary goals:
 Requirements
 ============
 
-Chef:
+###Chef:
 * Chef 11+
 
-Platform:
+###Platform:
+* RHEL and derivatives
+* Fedora
 
-* CentOS, Red Hat, Amazon, Oracle, Scientific, Fedora
-
-Cookbooks:
-
+###Cookbooks:
 * java
 
 Attributes
