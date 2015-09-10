@@ -17,23 +17,23 @@
 # limitations under the License.
 #
 
-include_recipe "java"
+include_recipe 'java'
 
 case node['platform_family']
-when "rhel","fedora"
+when 'rhel', 'fedora'
 
-  package "yum-priorities" do
+  package 'yum-priorities' do
     action :install
   end
 
-  execute "yum clean all" do
+  execute 'yum clean all' do
     action :nothing
   end
 
   if node['platform_version'].to_i == 5
-    template "/etc/yum.repos.d/jpackage#{node['jpackage']['version'].sub(/\./,'')}.repo" do
+    template "/etc/yum.repos.d/jpackage#{node['jpackage']['version'].sub(/\./, '')}.repo" do
       mode '0644'
-      source "jpackage.repo.erb"
+      source 'jpackage.repo.erb'
       notifies :run, 'execute[yum clean all]', :immediately
     end
 
@@ -41,20 +41,20 @@ when "rhel","fedora"
     # https://bugzilla.redhat.com/show_bug.cgi?id=497213
     # http://plone.lucidsolutions.co.nz/linux/centos/jpackage-jpackage-utils-compatibility-for-centos-5.x
     remote_file "#{Chef::Config['file_cache_path']}/jpackage-utils-compat-el5-0.0.1-1.noarch.rpm" do
-      checksum "c61f2a97e4cda0781635310a6a595e978a2e48e64cf869df7d339f0db6a28093"
-      source "http://plone.lucidsolutions.co.nz/linux/centos/images/jpackage-utils-compat-el5-0.0.1-1.noarch.rpm"
+      checksum 'c61f2a97e4cda0781635310a6a595e978a2e48e64cf869df7d339f0db6a28093'
+      source 'http://plone.lucidsolutions.co.nz/linux/centos/images/jpackage-utils-compat-el5-0.0.1-1.noarch.rpm'
       mode '0644'
     end
 
-    package "jpackage-utils-compat-el5" do
+    package 'jpackage-utils-compat-el5' do
       source "#{Chef::Config['file_cache_path']}/jpackage-utils-compat-el5-0.0.1-1.noarch.rpm"
-      options "--nogpgcheck"
-      version "0.0.1"
+      options '--nogpgcheck'
+      version '0.0.1'
       action :install
     end
   end
 
-  package "jpackage-utils" do
+  package 'jpackage-utils' do
     action :install
   end
 end
