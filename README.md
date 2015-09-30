@@ -11,37 +11,36 @@ The JPackage Project has two primary goals:
 * To provide a coherent set of Java software packages for Linux, satisfying all quality requirements of other applications.
 * To establish an efficient and robust policy for Java software packaging and installation.
 
+
 Requirements
-============
+------------
+#### Platforms
+- RHEL/CentOS/Scientific/Amazon/Oracle
+- Fedora
 
-###Chef:
-* Chef 11+
+#### Chef
+- Chef 11+
 
-###Platform:
-* RHEL and derivatives
-* Fedora
+#### Cookbooks
+- java
 
-###Cookbooks:
-* java
 
 Attributes
-==========
+----------
 
 * `node["jpackage"]["version"]` - The JPackage version to install, default "5.0".
 
 Usage
-=====
-
+-----
 Simply include the recipe where you want JPackage installed.
 
-License and Author
-==================
+License & Authors
+-----------------
 
-Author:: Seth Chisamore (<schisamo@chef.io>)
+**Author:** Cookbook Engineering Team (<cookbooks@chef.io>)
 
-```text
-Copyright 2010-2015, Chef Software, Inc.
-
+**Copyright:** 2010-2015, Chef Software, Inc.
+```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
