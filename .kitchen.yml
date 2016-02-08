@@ -11,4 +11,4 @@ platforms:
 
 suites:
 - name: default
-    run_list: jpackage::default
+  run_list: jpackage::default
