@@ -7,6 +7,9 @@ The JPackage Project has two primary goals:
 - To provide a coherent set of Java software packages for Linux, satisfying all quality requirements of other applications.
 - To establish an efficient and robust policy for Java software packaging and installation.
 
+# Deprecation Notice
+The jpackage repository project has not been updated since late 2009. Due to the stale nature of the packages in the repository this cookbook is considered deprecated. No further work will take place on this cookbook.
+
 ## Requirements
 ### Platforms
 - RHEL/CentOS/Scientific/Amazon/Oracle
