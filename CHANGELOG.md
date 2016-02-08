@@ -2,6 +2,10 @@ jpackage Cookbook CHANGELOG
 ===========================
 This file is used to list changes made in each version of the jpackage cookbook.
 
+v1.0.5
+------
+- Marking as deprecated since the jpackage repository hasn't been updated since late 2009
+
 v1.0.4
 ------
 * Added gitignore and chefignore files
