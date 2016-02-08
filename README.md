@@ -1,45 +1,34 @@
-jpackage Cookbook
-=================
-
-[![Build Status](https://travis-ci.org/chef-cookbooks/jpackage.svg?branch=master)](http://travis-ci.org/chef-cookbooks/jpackage)
-[![Cookbook Version](https://img.shields.io/cookbook/v/jpackage.svg)](https://supermarket.chef.io/cookbooks/jpackage)
+# jpackage Cookbook
+[![Build Status](https://travis-ci.org/chef-cookbooks/jpackage.svg?branch=master)](http://travis-ci.org/chef-cookbooks/jpackage) [![Cookbook Version](https://img.shields.io/cookbook/v/jpackage.svg)](https://supermarket.chef.io/cookbooks/jpackage)
 
 Configures and installs JPackage.  Used to install Java-related packages on Red Hat flavored linuxes
 
 The JPackage Project has two primary goals:
+- To provide a coherent set of Java software packages for Linux, satisfying all quality requirements of other applications.
+- To establish an efficient and robust policy for Java software packaging and installation.
 
-* To provide a coherent set of Java software packages for Linux, satisfying all quality requirements of other applications.
-* To establish an efficient and robust policy for Java software packaging and installation.
-
-
-Requirements
-------------
-#### Platforms
+## Requirements
+### Platforms
 - RHEL/CentOS/Scientific/Amazon/Oracle
 - Fedora
 
-#### Chef
+### Chef
 - Chef 11+
 
-#### Cookbooks
+### Cookbooks
 - java
 
+## Attributes
+- `node["jpackage"]["version"]` - The JPackage version to install, default "5.0".
 
-Attributes
-----------
-
-* `node["jpackage"]["version"]` - The JPackage version to install, default "5.0".
-
-Usage
------
+## Usage
 Simply include the recipe where you want JPackage installed.
 
-License & Authors
------------------
-
-**Author:** Cookbook Engineering Team (<cookbooks@chef.io>)
+## License & Authors
+**Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))
 
 **Copyright:** 2010-2015, Chef Software, Inc.
+
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
